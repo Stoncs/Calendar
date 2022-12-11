@@ -1,0 +1,32 @@
+version: '1'
+
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres
+    PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - '5432:5432'
+    networks:
+      - postgres
+    restart: unless-stopped
+  server:
+    container_name: server_container
+    depends_on:
+      - postgres
+    build:
+      context: ./server
+    ports:
+      - 8081:8081
+    restart: always
+  client:
+    container_name: client_container
+    restart: always
+    build:
+      context: ./client
+    ports:
+      - 3000:3000
