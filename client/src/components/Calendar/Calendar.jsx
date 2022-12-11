@@ -3,25 +3,34 @@ import Day from "../day/day.jsx";
 import "./Calendar.scss";
 import PropTypes from "prop-types";
 import { getAll } from "../../http/noteApi.js";
+import { FormattedMessage } from "react-intl";
 
 const nDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  <FormattedMessage key={1} id='january' />,
+  <FormattedMessage key={2} id='february' />,
+  <FormattedMessage key={3} id='march' />,
+  <FormattedMessage key={4} id='april' />,
+  <FormattedMessage key={5} id='may' />,
+  <FormattedMessage key={6} id='june' />,
+  <FormattedMessage key={7} id='july' />,
+  <FormattedMessage key={8} id='august' />,
+  <FormattedMessage key={9} id='september' />,
+  <FormattedMessage key={10} id='october' />,
+  <FormattedMessage key={11} id='november' />,
+  <FormattedMessage key={12} id='december' />,
 ];
 
-const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const weekDays = [
+  <FormattedMessage key={1} id='mon' />,
+  <FormattedMessage key={2} id='tue' />,
+  <FormattedMessage key={3} id='wed' />,
+  <FormattedMessage key={4} id='thu' />,
+  <FormattedMessage key={5} id='fri' />,
+  <FormattedMessage key={6} id='sat' />,
+  <FormattedMessage key={7} id='sun' />,
+];
 
 const Calendar = ({activeDay, setActiveDay, states, state, setState, notes}) => {
   const month = activeDay.getMonth();
