@@ -12,10 +12,22 @@ code {
     monospace;
 }
 
+* {
+  transition: all 0.5s;
+}
+
 .app {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--background);
   width: 100vw;
   height: 100vh;
+  transition: all 0.5s;
+}
+
+.change-theme {
+  position: absolute;
+  top: 0;
+  transition: 0.5s;
 }

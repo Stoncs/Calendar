@@ -1,5 +1,21 @@
-$bg_color: #B2FAF8;
-$active_color: #6472EB;
-$hover_color: #A7EBE8;
-$disble_color: $bg_color;
-$days_week_color: #94D1CF;
+
+[data-theme="light"] {
+  --bg_color: #B2FAF8;
+  --active_color: #6472EB;
+  --hover_color: #A7EBE8;
+  --disble_color: var(--bg_color);
+  --days_week_color: #94D1CF;
+  --background: white;
+  --text-color: black;
+}
+
+[data-theme="dark"] {
+  --bg_color: #332973;
+  --active_color: #4a3d9f;
+  --hover_color: #52488f;
+  --disble_color: var(--bg_color);
+  --days_week_color: #837ABB;
+  --background: #150C48;
+  --text-color: white;
+}
+

@@ -87,7 +87,7 @@ const Calendar = ({activeDay, setActiveDay, states, state, setState, notes}) => 
       <div className="calendar__header">
         <button className="calendar__btn" onClick={() => setActiveDay(new Date(activeDay.getFullYear(), activeDay.getMonth()-1, activeDay.getDate()))}>{"<"}</button>
         <div>
-          {activeDay.getFullYear()}
+          <div className="calendar__year">{activeDay.getFullYear()}</div>
           <div className="calendar__month">{months[activeDay.getMonth()]}</div>
         </div>
 
