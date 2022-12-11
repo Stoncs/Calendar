@@ -3,6 +3,7 @@ import "./Area.scss";
 import PropTypes from "prop-types";
 import { create, deleteById } from "../../http/noteApi";
 import Note from "../note/note.jsx";
+import { FormattedMessage } from "react-intl";
 
 const Area = ({activeDay, state, setState, states, notes}) => {
   const [value, setValue] = React.useState("");
@@ -47,7 +48,7 @@ const Area = ({activeDay, state, setState, states, notes}) => {
   };
   return (
     <div className="area">
-      <div className="area__header">Просмотр заметок {activeDay.getDate() + "." + (activeDay.getMonth() + 1) + "." + activeDay.getFullYear()}</div>
+      <div className="area__header">{<FormattedMessage id='notes' />} {activeDay.getDate() + "." + (activeDay.getMonth() + 1) + "." + activeDay.getFullYear()}</div>
       {(state == states.view) ?
         <div className="area__list-notes">
           {noteList.map((item) => <Note key={item.id} id={item.id} text={item.text} activeNote={activeNote} setActiveNote={setActiveNote}/>)}
@@ -59,13 +60,13 @@ const Area = ({activeDay, state, setState, states, notes}) => {
       }
       {(state == states.view) ?
         <div className="area__buttons">
-          <button onClick={() => onClickCreate()}>Создать</button>
-          <button onClick={() => onClickDelete()}>Удалить</button>
+          <button onClick={() => onClickCreate()}>{<FormattedMessage id='create' />}</button>
+          <button onClick={() => onClickDelete()}>{<FormattedMessage id='delete' />}</button>
         </div>
         :
         <div className="area__buttons">
-          <button onClick={() => onClickSave(value)}>Сохранить</button>
-          <button onClick={() => onClickCancel()}>Отмена</button>
+          <button onClick={() => onClickSave(value)}>{<FormattedMessage id='save' />}</button>
+          <button onClick={() => onClickCancel()}>{<FormattedMessage id='cancel' />}</button>
         </div>
       }
     </div>
