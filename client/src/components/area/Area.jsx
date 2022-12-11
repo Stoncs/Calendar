@@ -33,7 +33,7 @@ const Area = ({activeDay, state, setState, states, notes}) => {
       if (activeDay.getFullYear() == date_db.getFullYear() && activeDay.getMonth() == date_db.getMonth() && activeDay.getDate() == date_db.getDate()) ar_notes.push({id: notes[note].id, text: notes[note].text});
     }
     setNoteList(ar_notes);
-  }), [];
+  }, [notes, activeDay]);
   
   const onClickCreate = () => {
     setState(states.edit); 

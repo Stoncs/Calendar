@@ -47,7 +47,7 @@ const Calendar = ({activeDay, setActiveDay, states, state, setState, notes}) => 
     const year = activeDay.getFullYear();
     const month = activeDay.getMonth();
     
-    const firstDay = new Date(year, month, 1).getDay()-1;
+    const firstDay = new Date(year, month, 1).getDay()-1 == -1 ? 6 : new Date(year, month, 1).getDay()-1;
 
     let maxDays = nDays[month];
     if (month == 1) {
