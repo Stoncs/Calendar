@@ -3,26 +3,26 @@
 .day {
   width: 70px;
   height: 70px;
-  background-color: $bg_color;
+  background-color: var(--bg_color);
   text-align: center;
   &:hover {
     cursor: pointer;
-    background-color: $hover_color;
+    background-color: var(--hover_color);
   }
   &--disabled {
-    background-color: $disble_color;
+    background-color: var(--disble_color);
     &:hover {
-      background-color: $disble_color;
+      background-color: var(--disble_color);
       cursor: unset;
     }
   }
 
   &--active {
     &:hover {
-      background-color: $active_color;
+      background-color: var(--active_color);
       cursor: unset;
     }
-    background-color: $active_color;
+    background-color: var(--active_color);
   }
 
   &--holiday {
