@@ -13,8 +13,13 @@ beforeEach(async () => {
     date: { type: DataTypes.DATE },
     text: { type: DataTypes.STRING },
   });
-  await mockedSequelize.authenticate();
-  await mockedSequelize.sync({ force: true });
+  try {
+    await mockedSequelize.authenticate();
+    await mockedSequelize.sync({ force: true });
+  } catch (e) {
+    console.log(e);
+    next(e);
+  }
 });
 
 test("/ping", async () => {
