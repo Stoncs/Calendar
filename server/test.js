@@ -8,11 +8,12 @@ beforeEach(async () => {
     host: "localhost",
     dialect: "postgres",
   });
-  const Note = mockedSequelize.define("calendar", {
+  mockedSequelize.define("calendar", {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     date: { type: DataTypes.DATE },
     text: { type: DataTypes.STRING },
   });
+  await mockedSequelize.authenticate();
   await mockedSequelize.sync({ force: true });
 });
 
