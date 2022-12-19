@@ -38,17 +38,17 @@
       Frontend
     </td>
     <td>
-      <a href="https://github.com/alyona-korenkovich/note-taking-app/actions/workflows/frontend.yml?query=branch%3Adevelop">
+      <a href="https://github.com/Stoncs/Calendar/actions/workflows/frontend.yml?query=branch%3Adevelop">
         <img 
-          src="https://github.com/alyona-korenkovich/note-taking-app/actions/workflows/frontend.yml/badge.svg?branch=develop"
+          src="https://github.com/Stoncs/Calendar/actions/workflows/frontend.yml/badge.svg?branch=develop"
           alt="frontend-develop"
         />
       </a>
     </td>
     <td>
-      <a href="https://github.com/alyona-korenkovich/note-taking-app/actions/workflows/frontend.yml?query=branch%3Amain">
+      <a href="https://github.com/Stoncs/Calendar/actions/workflows/frontend.yml?query=branch%3Amain">
         <img 
-          src="https://github.com/alyona-korenkovich/note-taking-app/actions/workflows/frontend.yml/badge.svg?branch=main"
+          src="https://github.com/Stoncs/Calendar/actions/workflows/frontend.yml/badge.svg?branch=main"
           alt="frontend-main"
         />
       </a>
