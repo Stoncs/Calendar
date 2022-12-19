@@ -2,12 +2,15 @@ name: Frontend CI
 
 on:
   push:
-    branches: [develop, main]
+    branches:
+      - develop
+      - main
     paths:
       - 'client/**'
   pull_request:
     branches:
-      - [develop, main]
+      - develop
+      - main
     paths:
       - 'client/**'
   workflow_dispatch:

@@ -2,12 +2,15 @@ name: Backend CI
 
 on:
   push:
-    branches: [develop, main]
+    branches:
+      - develop
+      - main
     paths:
       - 'server/**'
   pull_request:
     branches:
-      - [develop, main]
+      - develop
+      - main
     paths:
       - 'server/**'
   workflow_dispatch:
