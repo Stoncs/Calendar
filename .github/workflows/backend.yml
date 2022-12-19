@@ -24,7 +24,9 @@ jobs:
       postgres:
         image: postgres:latest
         env:
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: calendar
         ports:
           - 5432:5432
         options: >-
