@@ -17,7 +17,7 @@ function App() {
   const [activeDay, setActiveDay] = React.useState(new Date());
   const [state, setState] = React.useState(states.view);
   const [notes, setNotes] = React.useState([]);
-  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)") && window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [theme, setTheme] = useLocalStorage("theme", defaultDark ? "dark" : "light");
   const switchTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";

@@ -14,14 +14,23 @@ app.use('/api', router);
 // set port, listen for requests
 const PORT = process.env.DB_PORT || 8080;
 
+// ping function
+app.get('/ping', (req, res) => res.json({ pong: true }));
+let server = app.listen(PORT, () => console.log('server started ', PORT));
+
 const start = async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync();
-    app.listen(PORT, () => console.log('server started ', PORT));
+    await sequelize.sync({ force: true, logging: false });
   } catch (e) {
     console.log(e);
   }
 };
 
 start();
+
+module.exports = server;
+exports.init = async () => {
+  await sequelize.authenticate();
+  await sequelize.sync({ force: true, logging: false });
+};
