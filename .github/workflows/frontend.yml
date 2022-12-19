@@ -2,17 +2,13 @@ name: Frontend CI
 
 on:
   push:
-    branches:
-      - develop
-      - main
+    branches: ["main", "develop"]
     paths:
-      - 'client/**'
+      - "client/**"
   pull_request:
-    branches:
-      - develop
-      - main
+    branches: ["main", "develop"]
     paths:
-      - 'client/**'
+      - "client/**"
   workflow_dispatch:
 
 jobs:
@@ -28,7 +24,7 @@ jobs:
       - name: Set up JS environment
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "16.15.1"
 
       - name: Install dependencies
         working-directory: client

@@ -2,17 +2,13 @@ name: Backend CI
 
 on:
   push:
-    branches:
-      - develop
-      - main
+    branches: ["main", "develop"]
     paths:
-      - 'server/**'
+      - "server/**"
   pull_request:
-    branches:
-      - develop
-      - main
+    branches: ["main", "develop"]
     paths:
-      - 'server/**'
+      - "server/**"
   workflow_dispatch:
 
 jobs:
@@ -23,7 +19,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}
 
-    container: node:18
+    container: node:16.15.1
 
     steps:
       - name: Checkout code to runner
