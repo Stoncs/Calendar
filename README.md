@@ -2,6 +2,60 @@
 
 Учебный проект по курсу "Основы программной инжерении"
 
+# Результаты тестов
+
+<table>
+  <tr>
+    <th></th>
+    <th>develop</th>
+    <th>main</th>
+  </tr>
+
+  <tr>
+    <td>
+      Backend
+    </td>
+    <td>
+      <a href="https://github.com/Stoncs/Calendar/actions/workflows/backend.yml?query=branch%3Adevelop">
+        <img 
+          src="https://github.com/Stoncs/Calendar/actions/workflows/backend.yml/badge.svg?branch=develop"
+          alt="backend-develop"
+        />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/Stoncs/Calendar/actions/workflows/backend.yml?query=branch%3Amain">
+        <img 
+          src="https://github.com/Stoncs/Calendar/actions/workflows/backend.yml/badge.svg?branch=main"
+          alt="backend-main"
+        />
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Frontend
+    </td>
+    <td>
+      <a href="https://github.com/Stoncs/Calendar/actions/workflows/frontend.yml?query=branch%3Adevelop">
+        <img 
+          src="https://github.com/Stoncs/Calendar/actions/workflows/frontend.yml/badge.svg?branch=develop"
+          alt="frontend-develop"
+        />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/Stoncs/Calendar/actions/workflows/frontend.yml?query=branch%3Amain">
+        <img 
+          src="https://github.com/Stoncs/Calendar/actions/workflows/frontend.yml/badge.svg?branch=main"
+          alt="frontend-main"
+        />
+      </a>
+    </td>
+  </tr>
+</table>
+
 # Инструкция по запуску
 
 В первом терминале:
