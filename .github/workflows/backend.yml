@@ -15,14 +15,14 @@ jobs:
   run-tests:
     strategy:
       matrix:
-        os: [ubuntu-18.04, windows-2022, macos-latest]
+        os: [ubuntu-18.04, windows-2022, ubuntu-latest]
         node-version: [16.15.1]
 
     runs-on: ${{ matrix.os }}
 
     services:
       postgres:
-        image: postgres
+        image: postgres:latest
 
     steps:
       - uses: actions/checkout@v3
