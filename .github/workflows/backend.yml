@@ -7,7 +7,7 @@ on:
       - 'server/**'
   pull_request:
     branches:
-      - [develop, master]
+      - [develop, main]
     paths:
       - 'server/**'
   workflow_dispatch:
